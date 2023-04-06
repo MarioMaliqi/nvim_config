@@ -25,6 +25,8 @@ return require('packer').startup(function(use)
 
 			{'hrsh7th/nvim-cmp'},
 			{'hrsh7th/cmp-nvim-lsp'},
+			{'hrsh7th/cmp-nvim-lsp-signature-help'},
+			{'hrsh7th/cmp-buffer'},
 			{'L3MON4D3/LuaSnip'},
 		}
 	}
