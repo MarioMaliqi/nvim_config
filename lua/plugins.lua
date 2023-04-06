@@ -1,6 +1,6 @@
 return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
-	use {'dracula/vim', as = 'dracula'}
+	use {'morhetz/gruvbox', as = 'gruvbox'}
 	use {
 		'nvim-lualine/lualine.nvim',
 		requires = { 'nvim-tree/nvim-web-devicons', opt = true }
@@ -30,6 +30,7 @@ return require('packer').startup(function(use)
 			{'L3MON4D3/LuaSnip'},
 		}
 	}
+	use { "nvim-treesitter/nvim-treesitter" }
 	-- rust specific stuff
 	use "rust-lang/rust.vim"
 end)
