@@ -1,6 +1,6 @@
 return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
-	use {'morhetz/gruvbox', as = 'gruvbox'}
+	use {'cocopon/iceberg.vim', as = 'iceberg'}
 	use {
 		'nvim-lualine/lualine.nvim',
 		requires = { 'nvim-tree/nvim-web-devicons', opt = true }
@@ -33,4 +33,5 @@ return require('packer').startup(function(use)
 	use { "nvim-treesitter/nvim-treesitter" }
 	-- rust specific stuff
 	use "rust-lang/rust.vim"
+
 end)
