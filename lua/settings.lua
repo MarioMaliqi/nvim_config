@@ -8,6 +8,8 @@ vim.opt.ts = 4
 vim.opt.sts = 4
 vim.opt.sw = 4
 
+vim.opt.clipboard = "unnamedplus"
+
 vim.opt.smartindent = true
 
 vim.opt.swapfile = false
@@ -21,4 +23,4 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 
 vim.cmd("let loaded_netrwPlugin = 1")
-vim.cmd("let g:rustfmt_autosave = 1")
+vim.cmd("set clipboard=unnamedplus")

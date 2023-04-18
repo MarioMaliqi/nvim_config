@@ -9,9 +9,6 @@ lsp.ensure_installed({
 
 local cmp = require("cmp")
 lsp.setup_nvim_cmp({
-	mapping = cmp.mapping.preset.insert({
-		['<CR>'] = cmp.mapping.confirm({ select = true })
-	}),
 	sources = cmp.config.sources({
 		{ name = 'nvim_lsp' },
 		{ name = "nvim_lsp_signature_help"},
