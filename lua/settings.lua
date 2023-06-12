@@ -1,3 +1,4 @@
+vim.opt.mouse = ""
 vim.opt.nu = true
 -- vim.opt.rnu = true
 vim.opt.termguicolors = true
