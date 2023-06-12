@@ -1,20 +1,18 @@
-local lsp = require('lsp-zero')
+local lspconfig = require('lspconfig')
+local util = require('lspconfig/util')
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-lsp.preset("recommended")
-
-lsp.ensure_installed({
-	"rust_analyzer",
-	"lua_ls"
-})
-
-local cmp = require("cmp")
-lsp.setup_nvim_cmp({
-	sources = cmp.config.sources({
-		{ name = 'nvim_lsp' },
-		{ name = "nvim_lsp_signature_help"},
-		{ name = "buffer" },
-		{ name = 'luasnip' },
-	})
-})
-
-lsp.setup()
+lspconfig.gopls.setup {
+	cmd = {"gopls", "serve"},
+	filetypes = {"go", "gomod"},
+	root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+	capabilities = capabilities,
+	settings = {
+		gopls = {
+			analyses = {
+				unusedparams = true,
+			},
+			staticcheck = true,
+		},
+	},
+}
